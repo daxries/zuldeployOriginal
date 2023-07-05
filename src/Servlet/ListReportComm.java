@@ -36,7 +36,7 @@ public class ListReportComm extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setAttribute("reports", ReportDAO.getReportDetails());
-		RequestDispatcher view = request.getRequestDispatcher("res viewReport.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("comm viewReport.jsp");
 		view.forward(request, response);
 	}
 }

@@ -78,7 +78,7 @@ tr:nth-child(even) {
 }
 .button {
   border: none;
-  color: white;
+  color: #1C58F7  ;
   padding: 8px 20px;
   text-align: center;
   text-decoration: none;
@@ -168,7 +168,7 @@ form .btn:hover button{
 									<td><c:out value="${patrolman.patrolmanUsername}" /></td>
 									<td><c:out value="${patrolman.patrolmanPassword}" /></td>
 									<td><c:out value="${patrolman.residentId}" /></td>
-									<td><a href="UpdatePatrolman?&patrolmanId=<c:out value="${patrolman.patrolmanId}"/>" class="button">Update</a></td>
+									<td><a href="UpdatePatrolman?&patrolmanUsername=<c:out value="${patrolman.patrolmanUsername}"/>" class="button">Update</a></td>
 							</c:forEach>
 			</table>
 			

@@ -26,7 +26,7 @@
   position: absolute;
   top: 3%;
   width: 1185px;
-  height: 500px;
+  height: 1500px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 10px;
@@ -170,6 +170,7 @@ a{margin-right: 4px;}
          
   <div class="imgcontainer">
 <div class="container">
+<a href="HOMEPAGE PAT.jsp"><img src="img/close.png"></a>
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">
@@ -190,7 +191,7 @@ a{margin-right: 4px;}
 									<td><c:out value="${report.patrolmanId}" /></td>
 									<td><c:out value="${report.reportDescription}" /></td>
 									<td><c:out value="${report.reportDateSubmit}" /></td>
-									<td><a href="viewReport?action=view&reportId=<c:out value="${report.reportId}"/>" class="button">View</a></td>
+									<td><a href="viewReportPat?action=view&reportId=<c:out value="${report.reportId}"/>" class="button">View</a></td>
 									<td><a href="UpdateReport?&reportId=<c:out value="${report.reportId}"/>" class="button">Update</a></td>
 									<td><a href="DeleteReport?action=delete&reportId=<c:out value="${report.reportId}"/>" class="button">Delete</a></td>
 							</c:forEach>

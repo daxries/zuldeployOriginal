@@ -146,6 +146,9 @@ form .btn:hover button{
          
   <div class="imgcontainer">
 <div class="container">
+
+
+<a href="HOMEPAGE COM.jsp"><img src="img/close.png"></a>
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">

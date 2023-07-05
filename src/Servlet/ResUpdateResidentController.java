@@ -45,6 +45,8 @@ public class ResUpdateResidentController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		
 		Resident s = new Resident();
 		s.setResidentId(request.getParameter("residentId"));
 		s.setResidentName(request.getParameter("residentName"));
@@ -57,6 +59,9 @@ public class ResUpdateResidentController extends HttpServlet {
 		
 		dao.updateResident(s); 
 		
+		String residentUsername = request.getParameter("residentUsername");
+	
+		request.setAttribute("residentUsername", residentUsername);
 		request.setAttribute("residents", ResidentDAO.getResidentDetails());
 		RequestDispatcher view = request.getRequestDispatcher("HOMEPAGE RESIDENTS.jsp");
 		view.forward(request, response);

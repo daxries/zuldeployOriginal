@@ -59,7 +59,7 @@ public void addPatrolman(Patrolman bean) {
 					
 			//setting the string part of the id, which should be start with "P"
 			String depan = "";
-				
+			
 			if (trye + 1 < 10)
 			{
 				depan = "P00";
@@ -72,6 +72,9 @@ public void addPatrolman(Patrolman bean) {
 			
 		
 			int newtrye = trye + 1;
+			
+			if (newtrye == 7) { newtrye = newtrye + 1; }
+				
 				
 			String newid = depan + newtrye ;
 				
@@ -207,15 +210,15 @@ public void addPatrolman(Patrolman bean) {
 	
 	
 	
-	public static Patrolman getPatrolmanProfile(String patrolmanId) { 
+	public static Patrolman getPatrolmanProfile(String patrolmanUsername) { 
 		Patrolman patrolman = new Patrolman();
 		try {
 			//call getConnection() method
 			con = ConnectionManager.getConnection();
 
 			
-			ps = con.prepareStatement("SELECT * FROM patrolman WHERE patrolmanId=?");
-			ps.setString(1, patrolmanId);
+			ps = con.prepareStatement("SELECT * FROM patrolman WHERE patrolmanUsername=?");
+			ps.setString(1, patrolmanUsername);
 
 			//execute query
 			

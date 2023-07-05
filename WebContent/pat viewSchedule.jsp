@@ -169,7 +169,10 @@ a{margin-right: 4px;}
 	
          
   <div class="imgcontainer">
+  
+
 <div class="container">
+<a href="HOMEPAGE PAT.jsp"><img src="img/close.png"></a>
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">

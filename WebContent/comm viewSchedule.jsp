@@ -1,5 +1,4 @@
-asdsd
-sd<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
@@ -171,6 +170,8 @@ a{margin-right: 4px;}
          
   <div class="imgcontainer">
 <div class="container">
+
+<a href="HOMEPAGE COM.jsp"><img src="img/close.png"></a>
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered">

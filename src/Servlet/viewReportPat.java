@@ -19,15 +19,15 @@ import DAO.ReportDAO;
  * Servlet implementation class viewSchedule
  */
 
-@WebServlet("/ViewReports")
-public class viewReport extends HttpServlet {
+@WebServlet("/ViewReportssz")
+public class viewReportPat extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	//private ReportDAO dao;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public viewReport() {
+    public viewReportPat() {
         super();
         //dao = new ReportDAO();
         // TODO Auto-generated constructor stub
@@ -40,7 +40,7 @@ public class viewReport extends HttpServlet {
 		// TODO Auto-generated method stub
 		String reportId = request.getParameter("reportId");
 		request.setAttribute("report",ReportDAO.getReportDetail(reportId));
-		RequestDispatcher view = request.getRequestDispatcher("res viewDetailReport.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("pat viewDetailReport.jsp");
 		view.forward(request, response);
 	}
 }

@@ -46,7 +46,7 @@ public class createScheduleController extends HttpServlet {
 		    dao.addSchedule(s);
 		    
 		    request.setAttribute("schedules", scheduleDao.getScheduleDetails());
-		    RequestDispatcher view = request.getRequestDispatcher("listScheduleControllerComm"); 
+		    RequestDispatcher view = request.getRequestDispatcher("HOMEPAGE COM.jsp"); 
 		    view.forward(request, response);
 	}
 

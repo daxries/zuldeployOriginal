@@ -154,17 +154,12 @@ a {text-decoration:none;}
   <div class="imgcontainer">
   </div>
 
+		<div class="data">
+                  <label>Patrolman ID:</label>  
+                  <input type="text" name="patrolmanId" > 					
+               </div>
 
-			<div class="data">
-                  <label>Report Id:</label> 
-                  <input type="text" name="reportId" >			  
-               </div>
-			
-               <div class="data">
-                  <label>Patrolman Id:</label> 	
-                  <input type="text" name="patrolmanId" >				  
-               </div>
-			   
+		
                <div class="data">
                   <label>Report Description:</label>  
                   <input type="text" name="reportDescription" > 					

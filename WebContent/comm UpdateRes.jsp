@@ -1,5 +1,4 @@
-asdsd
-sd<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
@@ -116,7 +115,7 @@ a {text-decoration:none;}
     <div class="center">
 	
          <div class="container">
-	      <a href="ListResidentController"><img src="img/close.png"></a>
+	      <a href="UpdateResidentListController"><img src="img/close.png"></a>
 		 
             <div class="text"><b>Update Resident Profile</b></div>
 			<div id="frmRegistration">

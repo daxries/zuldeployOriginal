@@ -10,7 +10,7 @@
 .container{
   background: #fff;
   width: 470px;
-  height: 800px;
+  height: 750px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 500px;
@@ -55,7 +55,7 @@ form .btn{
 form .btn button{
     border: none;
 	border-radius:5px;
-	padding: 10px 190px;
+	padding: 10px 175px;
 	position: absolute;
 	text-align: center;
 	font-size:20px;
@@ -79,12 +79,12 @@ form .btn:hover button{
   border: 1px solid white; /* Green border */
   color: white; /* White text */
   padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand iconajax*/
+  cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
 
 }
 
-/* Clear floats (clearfix hack) ajax */
+/* Clear floats (clearfix hack) */
 .btn-group:after {
   content: "";
   clear: both;
@@ -107,58 +107,41 @@ img.avatar {
   border-radius: 50%;
 
 a {text-decoration:none;}
-</style>
-</head>
+</style></head>
 <body style="margin:0; padding:0; font-family:Arial;background-color:#6667AB;">
 
     <div class="center">
 	
          <div class="container">
-	      <a href="HOMEPAGE COM.jsp"><img src="img/close.png"></a>
+	      <a href="HOMEPAGE PAT.jsp"><img src="img/close.png"></a>
 		 
-            <div class="text"><b>CREATE SCHEDULE</b></div>
+            <div class="text"><b>Profile</b></div>
 			<div id="frmRegistration">
            
 			<div class="hero">
 			
-			<form action="createScheduleController" method="post">
+			<form >
   <div class="imgcontainer">
   </div>
-	
 
-			<div class="data">
-                  <label>Patrolman ID:</label>
-                  <input type="text" name ="patrolmanId" > 			  
+				<div class="data">
+                  <label>Patrolman ID: <c:out value="${patrolman.patrolmanId}" /> </label>              
                </div>
-             
+               <div class="data">
+                  <label>Resident ID: <c:out value="${patrolman.residentId}" /></label>              
+               </div>
+               <div class="data">
+                  <label>Username: <c:out value="${patrolman.patrolmanUsername}" /></label>      
+               </div>
+			 
 			   <div class="data">
-                  <label>Time(HH:MM AM/PM - HH:MM AM/PM):</label>    
-					<input type="text"  name ="scheduleTime">
+                  <label>Password: <c:out value="${patrolman.patrolmanPassword}" /></label>      
                </div>
-			   <div class="data">
-                  <label>Date (YYYY-MM-DD):</label>    
-					<input type="text"  name ="scheduleDate">
-               </div>
-                <div class="data">
-                  <label>Location ID:</label> 	
-                  <select type="text"  name ="locationId">
-    				<option value="1">1 - Taman Pura Kencana 1</option>
-   					 <option value="2">2 - Taman Pura Kencana 2</option>
-  					  <option value="3">3 - Taman Pura Kencana 3</option>
-    				<option value="4">4 - Taman Pura Kencana 4</option>
-  				</select>				
-               </div>
-			  
-               <div class="btn">
-                 <button type="submit"><b>DONE</b></button>
-               </div>
-               
-   	   
-			   
+            
+            
             </form>
 			</div>
          </div>
       </div>
 </body>
-
 </html>

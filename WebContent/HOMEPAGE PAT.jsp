@@ -151,8 +151,8 @@ a{margin-right: 4px;}
 <div class="header">
 
   <div class="header-right">
-   Welcome,<c:out value="${patrolman.LoginUsername}" /> 
-    <a href="PatrolmanViewProfileServlet?PatrolmanUsername=<%=request.getAttribute("patrolmanUsername") %> ">PROFILE</a>
+   Welcome,<%=request.getAttribute("patrolmanUsername") %> 
+    <a href="PatrolmanViewProfileServlet?patrolmanUsername=<%=request.getAttribute("patrolmanUsername") %> ">PROFILE</a>
   
     <a href="login patrolman.jsp">LOGOUT</a>
   </div>
@@ -179,6 +179,7 @@ a{margin-right: 4px;}
 				
 					<a href="createRep.jsp" >Create Report</a>
 					<a href="ListReportPat?PatrolmanUsername=<%=request.getAttribute("patrolmanUsername") %>" >View Report</a>
+					
 					<hr>.</hr>
 				
 		        </div>

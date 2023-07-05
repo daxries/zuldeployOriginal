@@ -115,7 +115,7 @@ a {text-decoration:none;}
     <div class="center">
 	
          <div class="container">
-	      <a href="comm ViewUpPat.jsp"><img src="img/close.png"></a>
+	      <a href="ListPatrolmanControllerUpdate"><img src="img/close.png"></a>
 		 
             <div class="text"><b>Update Patrolman Profile</b></div>
 			<div id="frmRegistration">

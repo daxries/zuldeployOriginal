@@ -97,6 +97,7 @@ tr:nth-child(even) {
          
   		<div class="imgcontainer">
 				<div class="container">
+				<a href="HOMEPAGE COM.jsp"><img src="img/close.png"></a>
  				<div class="row">
     			<div class="col-12">
      

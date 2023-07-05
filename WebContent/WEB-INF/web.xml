@@ -344,6 +344,29 @@
     <url-pattern>/ResUpdateResidentController</url-pattern>
 </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>PatrolmanViewProfileServlet</display-name>
+    <servlet-name>PatrolmanViewProfileServlet</servlet-name>
+    <servlet-class>Servlet.PatrolmanViewProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatrolmanViewProfileServlet</servlet-name>
+    <url-pattern>/PatrolmanViewProfileServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <description></description>
+    <display-name>viewReportPat</display-name>
+    <servlet-name>viewReportPat</servlet-name>
+    <servlet-class>Servlet.viewReportPat</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewReportPat</servlet-name>
+    <url-pattern>/viewReportPat</url-pattern>
+</servlet-mapping>
+
+
   
   
 </web-app>

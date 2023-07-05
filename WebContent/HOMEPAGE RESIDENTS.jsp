@@ -152,7 +152,7 @@ a:hover, a:active {
 <div class="header">
 
   <div class="header-right">
-  Welcome, <c:out value="${patrolman.LoginUsername}" />
+  Welcome, <%=request.getAttribute("residentUsername") %> 
     <a href="ResidentViewProfileServlet?residentUsername=<%=request.getAttribute("residentUsername") %> ">PROFILE</a>
     <a href="index.jsp">LOGOUT</a>
     

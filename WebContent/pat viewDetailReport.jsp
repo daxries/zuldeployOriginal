@@ -113,7 +113,7 @@ a {text-decoration:none;}
     <div class="center">
 	
          <div class="container">
-	      <a href="ListReport"><img src="img/close.png"></a>
+	      <a href="ListReportPat"><img src="img/close.png"></a>
 		 
             <div class="text"><b>Report Detail</b></div>
 			<div id="frmRegistration">

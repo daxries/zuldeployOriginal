@@ -159,7 +159,7 @@ a{margin-right: 4px;}
 <div class="header">
 
   <div class="header-right">
-  <a href="HOMEPAGE RESIDENTS.jsp">HOME</a>
+  <a href="ResHomepageServlet">HOME</a>
    <a href="Res Profile.jsp">PROFILE</a>
     <a href="index.jsp">LOGOUT</a>
   </div>

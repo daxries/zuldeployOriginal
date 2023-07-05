@@ -34,8 +34,8 @@ public class UpdatePatrolman extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String patrolmanId = (request.getParameter("patrolmanId"));
-		request.setAttribute("patrolman", PatrolmanDAO.getPatrolmanProfile(patrolmanId));
+		String patrolmanUsername = (request.getParameter("patrolmanUsername"));
+		request.setAttribute("patrolman", PatrolmanDAO.getPatrolmanProfile(patrolmanUsername));
 		RequestDispatcher view = request.getRequestDispatcher("comm UpdatePat.jsp");
 		view.forward(request, response);
 	}

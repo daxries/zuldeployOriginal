@@ -194,8 +194,9 @@ a{margin-right: 4px;}
 			        <b href=""><img class="card-img" src="img/pm.png" alt="patrolman" /></b>
 			        <h3>PATROLMAN</h3>
 				
-					<a href="comm createPat.jsp" target =" blank">Create Patrolman</a>
-					<a href="ListPatrolmanControllerUpdate" target="_blank">Update Patrolman</a>
+					<a href="comm createPat.jsp">Create Patrolman</a>
+					<a href="ListPatrolmanControllerUpdate">Update Patrolman</a>
+					<br>
 					<a href="ListPatrolmanController">View Patrolman</a>
 					<hr>.</hr>
 				
@@ -205,8 +206,9 @@ a{margin-right: 4px;}
 			        <b href="PReport.html"><img class="card-img" src="img/rs.png" alt="resident" /></b>
 			        <h3>RESIDENT</h3>
 	
-					<a href="UpdateResidentListController" target="_blank">Update Resident</a>
 					<a href="ListResidentController">View Resident</a>
+					<a href="UpdateResidentListController" >Update Resident</a>
+					
 					<hr>.</hr>
 				
 		        </div>
