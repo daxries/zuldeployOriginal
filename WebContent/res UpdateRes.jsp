@@ -6,6 +6,45 @@
 <html lang="en">
 
 <head>
+<script>
+
+
+function validate(){
+	if (document.form.residentName.value == ""){
+	alert ( "Please fill in the name" );
+	document.loginform.userName.focus();
+	return false;
+	}
+	if (document.form.residentPhoneNum.value == ""){
+	alert ( "Please fill in the phone number." );
+	document.userform.password.focus();
+	return false;
+	}
+	if (document.form.residentAddress.value == ""){
+		alert ( "Please fill in the address." );
+		document.userform.password.focus();
+		return false;
+		}
+	if (document.form.residentEmail.value == ""){
+		alert ( "Please fill in the email." );
+		document.userform.password.focus();
+		return false;
+		}
+	if (document.form.residentUsername.value == ""){
+		alert ( "Please fill in the username." );
+		document.userform.password.focus();
+		return false;
+		}
+	if (document.form.residentPassword.value == ""){
+		alert ( "Please fill in the password." );
+		document.userform.password.focus();
+		return false;
+		}
+	alert ( "Successfully Updated" );
+	return true;
+	}
+
+</script>
 <meta charset="ISO-8859-1">
 <style>
 .container{
@@ -121,7 +160,7 @@ a {text-decoration:none;}
 			<div id="frmRegistration">
 			<div class="hero">
 			
-			<form action="ResUpdateResidentController" method="post">
+			<form name ="form" action="ResUpdateResidentController" method="post" onsubmit="return validate()">
   <div class="imgcontainer">
   </div>
 
