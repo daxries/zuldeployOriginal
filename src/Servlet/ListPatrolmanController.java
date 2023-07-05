@@ -1,6 +1,6 @@
 package Servlet;
 
-import java.io.IOException;
+import java.io.IOException; 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -16,13 +16,13 @@ import DAO.PatrolmanDAO;
 @WebServlet("/ListPatrolmanControlle")
 public class ListPatrolmanController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private PatrolmanDAO dao;       
+	//private PatrolmanDAO dao;       
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ListPatrolmanController() {
         super();
-        dao = new PatrolmanDAO();
+        //dao = new PatrolmanDAO();
         // TODO Auto-generated constructor stub
     }
 

@@ -47,7 +47,7 @@ public class UpdatePatrolman extends HttpServlet {
 		// TODO Auto-generated method stub
 		Patrolman p = new Patrolman();
 		p.setPatrolmanId(request.getParameter("patrolmanId"));
-		p.setResidentId(Integer.parseInt(request.getParameter("residentId")));
+		p.setResidentId(request.getParameter("residentId"));
 		p.setPatrolmanUsername(request.getParameter("patrolmanUsername"));
 		p.setPatrolmanPassword(request.getParameter("patrolmanPassword"));
 		

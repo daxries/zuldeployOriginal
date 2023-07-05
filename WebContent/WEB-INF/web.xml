@@ -308,6 +308,41 @@
     <servlet-name>PatrolViewScheduleDetail</servlet-name>
     <url-pattern>/PatrolViewScheduleDetail</url-pattern>
 </servlet-mapping>
+
+
+<servlet>
+    <description></description>
+    <display-name>CommDeleteScheduleController</display-name>
+    <servlet-name>CommDeleteScheduleController</servlet-name>
+    <servlet-class>Servlet.CommDeleteScheduleController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommDeleteScheduleController</servlet-name>
+    <url-pattern>/CommDeleteScheduleController</url-pattern>
+</servlet-mapping>
+  
+  
+<servlet>
+    <description></description>
+    <display-name>DeleteReport</display-name>
+    <servlet-name>DeleteReport</servlet-name>
+    <servlet-class>Servlet.DeleteReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteReport</servlet-name>
+    <url-pattern>/DeleteReport</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <description></description>
+    <display-name>ResUpdateResidentController</display-name>
+    <servlet-name>ResUpdateResidentController</servlet-name>
+    <servlet-class>Servlet.ResUpdateResidentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResUpdateResidentController</servlet-name>
+    <url-pattern>/ResUpdateResidentController</url-pattern>
+</servlet-mapping>
   
   
   

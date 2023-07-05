@@ -1,6 +1,6 @@
 package DAO;
 
-import java.sql.*;  
+import java.sql.*;   
 import java.util.*;
 
 import Database.ConnectionManager;
@@ -12,10 +12,12 @@ public class PatrolmanDAO {
 	private static PreparedStatement ps = null;
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
-	private static String sql;
+	//private static String sql;
 	private String patrolmanId;
-	private int residentId,patrolnum;
+	private String residentId;
+	//,patrolnum;
 	private String patrolmanUsername,patrolmanPassword;
+	private String login;
 
 	
 	//Complete addOrder() method
@@ -26,7 +28,7 @@ public void addPatrolman(Patrolman bean) {
 		private String patrolmanUsername,patrolmanPassword;
 		*/
 		
-		patrolnum = bean.getPatrolnum();
+		//patrolnum = bean.getPatrolnum();
 		patrolmanId = bean.getPatrolmanId();
 		residentId = bean.getResidentId();
 		patrolmanUsername = bean.getPatrolmanUsername();
@@ -46,7 +48,7 @@ public void addPatrolman(Patrolman bean) {
 			
 			//getting the number for the last patrolman (last inserted patrolman tu nombor berapa)
 			 int trye = 0;
-				ps = con.prepareStatement("SELECT patrolnum FROM patrolman2 ORDER BY patrolnum DESC LIMIT 1");
+				ps = con.prepareStatement("SELECT patrolnum FROM patrolman ORDER BY patrolnum DESC LIMIT 1");
 		
 			//executing the query
 				rs = ps.executeQuery();
@@ -73,10 +75,10 @@ public void addPatrolman(Patrolman bean) {
 				
 			String newid = depan + newtrye ;
 				
-			ps = con.prepareStatement("INSERT INTO patrolman2(patrolnum,patrolmanId,residentId,patrolmanUsername,patrolmanPassword)VALUES(?,?,?,?,?)");
+			ps = con.prepareStatement("INSERT INTO patrolman(patrolnum,patrolmanId,residentId,patrolmanUsername,patrolmanPassword)VALUES(?,?,?,?,?)");
 			ps.setInt(1, newtrye);
 			ps.setString(2, newid);
-			ps.setInt(3, residentId);
+			ps.setString(3, residentId);
 			ps.setString(4, patrolmanUsername);
 			ps.setString(5,patrolmanPassword);
 			
@@ -98,6 +100,7 @@ public void addPatrolman(Patrolman bean) {
 	public String authenticateUser(Patrolman patrolman)
     {
 	
+	
 		/* String studUsername = student.getStudUsername();
         String studPassword = student.getStudPassword(); //Assign user entered values to temporary variables.
         
@@ -108,6 +111,7 @@ public void addPatrolman(Patrolman bean) {
 		
 		String patrolmanUsername = patrolman.getPatrolmanUsername();
 		String patrolmanPassword = patrolman.getPatrolmanPassword();
+		
 		
 		String patrolmanUsernameDB = "";
 		String patrolmanPasswordDB = "";
@@ -146,7 +150,7 @@ public void addPatrolman(Patrolman bean) {
             return "Invalid user credentials"; // Return appropriate message in case of failure
         }
         */
-			
+			Patrolman patrolman2 = new Patrolman();
 			 while(rs.next()) // Until next row is present otherwise it return false
 	            {
 				 patrolmanUsernameDB = rs.getString("patrolmanUsername"); //fetch the values present in database
@@ -154,6 +158,7 @@ public void addPatrolman(Patrolman bean) {
 
 	              if(patrolmanUsername.equals(patrolmanUsernameDB) && patrolmanPassword.equals(patrolmanPasswordDB))
 	              {
+	            	 patrolman2.setPatrolmanLoginUsername(rs.getString("patrolmanUsername"));
 	                 return "SUCCESS"; ////If the user entered values are already present in the database, which means user has already registered so return a SUCCESS message.
 	              }
 	            }}
@@ -182,7 +187,7 @@ public void addPatrolman(Patrolman bean) {
 			while(rs.next()) {
 				Patrolman s = new Patrolman();
 				s.setPatrolmanId(rs.getString("patrolmanId"));
-				s.setResidentId(rs.getInt("residentId"));
+				s.setResidentId(rs.getString("residentId"));
 				s.setPatrolmanUsername(rs.getString("patrolmanUsername"));
 				s.setPatrolmanPassword(rs.getString("patrolmanPassword"));
 				
@@ -217,7 +222,7 @@ public void addPatrolman(Patrolman bean) {
 			rs = ps.executeQuery();
 			if(rs.next()) {
 				patrolman.setPatrolmanId(rs.getString("patrolmanId"));
-				patrolman.setResidentId(rs.getInt("residentId"));
+				patrolman.setResidentId(rs.getString("residentId"));
 				patrolman.setPatrolmanUsername(rs.getString("patrolmanUsername"));
 				patrolman.setPatrolmanPassword(rs.getString("patrolmanPassword"));
 				

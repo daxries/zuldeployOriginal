@@ -8,13 +8,14 @@ package DAO;
  * Student id:
  */
  
-import java.sql.*;       
+import java.sql.*;         
 import java.util.*;
-import java.util.Date;
+//import java.util.Date;
 
 import Database.ConnectionManager;
-import Model.Resident;
+//import Model.Resident;
 import Model.scheduleModel;
+import Database.ConnectionManager;
 
 
 public class scheduleDao {
@@ -22,7 +23,7 @@ public class scheduleDao {
 	private static PreparedStatement ps = null;
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
-	private static String sql;
+	//private static String sql;
 	private String scheduleId;
 	private String scheduleDate;
 	private String patrolmanId;
@@ -71,20 +72,50 @@ public class scheduleDao {
 
 		scheduleTime = bean.getScheduleTime();
 		locationId = bean.getLocationId();
+		
 	
-
 		try {			
 			//call getConnection() method
 			con = ConnectionManager.getConnection(); 
+			
+			//getting the number for the last schedule (last inserted schedule tu nombor berapa)
+			 int trye = 0;
+				ps = con.prepareStatement("SELECT schedulenum FROM schedule ORDER BY schedulenum DESC LIMIT 1");
+		
+			//executing the query
+				rs = ps.executeQuery();
+				
+			//putting the number into a variable called "trye" 
+				if(rs.next()) {
+					trye = rs.getInt("schedulenum");}
+					
+			//setting the string part of the id, which should be start with "S"
+			String depan = "";
+				
+			if (trye + 1 < 10)
+			{
+				depan = "S00";
+			}
+			
+			else if (trye + 1 >=10 && trye<100)
+			{
+				depan = "S0";
+			}
+			
+		
+			int newtrye = trye + 1;
+				
+			String newid = depan + newtrye ;
 
 			//create statement
 						
-			ps = con.prepareStatement("INSERT INTO schedule(scheduleId,patrolmanId,scheduleTime,scheduleDate,locationId)VALUES(?,?,?,?,?)");
-			ps.setString(1, scheduleId);
-			ps.setString(2, patrolmanId);
-			ps.setString(3, scheduleTime);
-			ps.setString(4, scheduleDate);
-			ps.setInt(5, locationId);
+			ps = con.prepareStatement("INSERT INTO schedule(schedulenum,scheduleid,patrolmanid,scheduletime,scheduledate,locationid)VALUES(?,?,?,?,?,?)");
+			ps.setInt(1,newtrye);
+			ps.setString(2,newid);
+			ps.setString(3, patrolmanId);
+			ps.setString(4, scheduleTime);
+			ps.setString(5, scheduleDate);
+			ps.setInt(6, locationId);
 			//execute query
 			ps.executeUpdate();
 			System.out.println("Successfully inserted");
@@ -132,6 +163,28 @@ public class scheduleDao {
 
 		return schedule; 
 	}
+	
+	public void deleteSchedule(String scheduleId) {
+		try {
+			//call getConnection() method 
+			con = ConnectionManager.getConnection();
+
+			//create statement 
+			ps = con.prepareStatement("DELETE FROM schedule WHERE scheduleid=?");
+			ps.setString(1, scheduleId);
+
+			//execute query
+			ps.executeUpdate();
+
+			//close connection
+			con.close();
+
+			}
+		catch(Exception e) 
+			{
+			e.printStackTrace();
+			}
+		}
 	
 	
 

@@ -16,13 +16,13 @@ import DAO.ReportDAO;
 @WebServlet("/ListReportP")
 public class ListReportPat extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ReportDAO dao;       
+	//private ReportDAO dao;       
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ListReportPat() {
         super();
-        dao = new ReportDAO();
+       // dao = new ReportDAO();
         // TODO Auto-generated constructor stub
     }
 
@@ -31,6 +31,7 @@ public class ListReportPat extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String patrolmanUsername = request.getParameter("patrolmanUsername");
 		request.setAttribute("reports", ReportDAO.getReportDetails());
 		RequestDispatcher view = request.getRequestDispatcher("pat viewReport.jsp");
 		view.forward(request, response);

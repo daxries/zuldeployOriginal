@@ -1,16 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+asdsd
+sd<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="ISO-8859-1">
 <style>
 .container{
   background: #fff;
   width: 470px;
-  height: 750px;
+  height: 1000px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 500px;
@@ -55,7 +57,7 @@ form .btn{
 form .btn button{
     border: none;
 	border-radius:5px;
-	padding: 10px 175px;
+	padding: 10px 190px;
 	position: absolute;
 	text-align: center;
 	font-size:20px;
@@ -107,49 +109,59 @@ img.avatar {
   border-radius: 50%;
 
 a {text-decoration:none;}
-</style></head>
+</style>
+</head>
 <body style="margin:0; padding:0; font-family:Arial;background-color:#6667AB;">
 
     <div class="center">
 	
          <div class="container">
-	      <a href="HOMEPAGE RESIDENTS.jsp"><img src="img/close.png"></a>
+	      <a href="ListResidentController"><img src="img/close.png"></a>
 		 
-            <div class="text"><b>Profile</b></div>
+            <div class="text"><b>Update Resident Profile</b></div>
 			<div id="frmRegistration">
-           
 			<div class="hero">
 			
-			<form >
+			<form action="ResUpdateResidentController" method="post">
   <div class="imgcontainer">
   </div>
 
-				<div class="data">
-                  <label>Resident ID: <c:out value="${resident.residentId}" /> </label>              
+
+			<div class="data">
+                 
                </div>
                <div class="data">
-                  <label>Name: <c:out value="${resident.residentName}" /></label>              
+                  <label>Name:</label> 
+					<input type="text" name="residentName" value="<c:out value="${resident.residentName}"/>">				  
                </div>
                <div class="data">
-                  <label>Phone Number: <c:out value="${resident.residentPhoneNum}" /></label>      
+                  <label>Phone Number:</label>   
+					<input type="number" name="residentPhoneNum" value="<c:out value="${resident.residentPhoneNum}"/>">
                </div>
 			   <div class="data">
-                  <label>Address: <c:out value="${resident.residentAddress}" /></label>      
+                  <label>Address:</label>    
+					<input type="text" name="residentAddress" value="<c:out value="${resident.residentAddress}"/>" >
                </div>
 			   <div class="data">
-                  <label>Email: <c:out value="${resident.residentEmail}" /></label>      
+                  <label>Email:</label> 
+					<input type="email" name="residentEmail" value="<c:out value="${resident.residentEmail}"/>" >
                </div>
 			   <div class="data">
-                  <label>Username: <c:out value="${resident.residentUsername}" /></label>      
+                  <label>Username:</label>    
+					<input type="text" name="residentUsername" value="<c:out value="${resident.residentUsername}"/>">
                </div>
 			   <div class="data">
-                  <label>Password: <c:out value="${resident.residentPassword}" /></label>      
+                  <label>Password:</label>  
+					<input type="text" name="residentPassword" value="<c:out value="${resident.residentPassword}"/>">
+					
+					<input type="hidden" name="residentId" value="<c:out value="${resident.residentId}"/>" /><br>
+					
                </div>
-            
-             <div class="btn">
-                 <button type="submit"><a href="ResUpdateResidentController?&residentId=<c:out value="${resident.residentId}"/>" class="button">Update</a></button>
+               <div class="btn">
+                 <button type="submit"><b>DONE</b></button>
                </div>
-            
+        
+			
             </form>
 			</div>
          </div>

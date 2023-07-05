@@ -2,7 +2,7 @@ package Servlet;
 
 import java.io.IOException; 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+//import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 import Model.Resident;
@@ -10,7 +10,12 @@ import DAO.ResidentDAO;
  
 public class LoginResidentServlet extends HttpServlet {
  
-    public LoginResidentServlet() // default constructor
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public LoginResidentServlet() // default constructor
     {
     }
  

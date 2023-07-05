@@ -79,14 +79,11 @@ form .btn:hover button{
 <body style="margin:0; padding:0; font-family:Arial;background-color:#7393B3;">
     <div class="center">
          <div class="container">
-		 <a href="login res.jsp"><img src="img/close.png"></a>
+		 <a href="index.jsp"><img src="img/close.png"></a>
             <div class="text"><b>sign Up </b></div>
             <form action="CreateResidentServlet" method="post">
-            
-            <div class="data">
-                  <label>Resident Id:</label>
-                  <input type="number" name="residentId" >
-               </div>
+        
+     
                
 			   <div class="data">
                   <label>Name</label>

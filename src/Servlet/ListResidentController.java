@@ -14,13 +14,13 @@ import DAO.ResidentDAO;
 @WebServlet("/ListResidentControlle")
 public class ListResidentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ResidentDAO dao;       
+	//private ResidentDAO dao;       
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ListResidentController() {
         super();
-        dao = new ResidentDAO();
+        //dao = new ResidentDAO();
         // TODO Auto-generated constructor stub
     }
 

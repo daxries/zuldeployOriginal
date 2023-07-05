@@ -1,13 +1,11 @@
 package DAO;
 
-import java.sql.*; 
-import java.sql.Date;
-import java.time.*;
+import java.sql.*;  
 import java.util.*;
 
 import Database.ConnectionManager;
 import Model.Location;
-import Model.Patrolman;
+//import Model.Patrolman;
 import DAO.locationDAO;
 
 
@@ -17,10 +15,10 @@ public class locationDAO {
 	private static PreparedStatement ps = null;
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
-	private static String sql;
-	private String locatianArea;
-	private int locationId;
-	private String locationAddress;
+	//private static String sql;
+	//private String locatianArea;
+	//private int locationId;
+	//private String locationAddress;
 	
 	public static Location getLocationDetail(int locationId) { 
 	    Location locations = new Location();

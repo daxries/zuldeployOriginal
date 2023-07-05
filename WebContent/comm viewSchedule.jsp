@@ -195,6 +195,7 @@ a{margin-right: 4px;}
   		<td><c:out value="${schedule.scheduleDate}" /></td>
   		<td><c:out value="${schedule.locationId}" /></td>
   		 <td><a href="CommViewSchedule?action=view&scheduleId=<c:out value="${schedule.scheduleId}"/>" class="button">View</a></td>
+  		 <td><a href="CommDeleteScheduleController?action=delete&scheduleId=<c:out value="${schedule.scheduleId}"/>" class="button">Delete</a></td>
 </c:forEach>
  
 </table>

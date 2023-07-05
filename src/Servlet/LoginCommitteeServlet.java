@@ -1,13 +1,13 @@
 package Servlet;
 
-import java.io.*;
-import java.nio.file.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.*; 
+//import java.nio.file.*;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.annotation.MultipartConfig;
+//import javax.servlet.annotation.WebServlet;
+//import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.*;
 
 import Model.Committee;
@@ -16,7 +16,12 @@ import DAO.LoginCommDAO;
 
 public class LoginCommitteeServlet extends HttpServlet {
 	 
-    public LoginCommitteeServlet() // default constructor
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public LoginCommitteeServlet() // default constructor
     {
     }
  

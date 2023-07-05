@@ -1,6 +1,6 @@
 package Servlet;
 
-import java.io.IOException; 
+import java.io.IOException;  
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -15,16 +15,16 @@ import DAO.ResidentDAO;
 @WebServlet("/CommViewResidentDetailServle")
 public class CommViewResidentDetailServlet  extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ResidentDAO dao;       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
+	/*
+	private ResidentDAO dao;  
+   
     public CommViewResidentDetailServlet() {
         super();
         dao = new ResidentDAO();
         // TODO Auto-generated constructor stub
     }
-
+*/
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

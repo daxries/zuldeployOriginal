@@ -16,13 +16,13 @@ import DAO.PatrolmanDAO;
 @WebServlet("/ListPatrolmanControllUp")
 public class ListPatrolmanControllerUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private PatrolmanDAO dao;       
+	//private PatrolmanDAO dao;       
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ListPatrolmanControllerUpdate() {
         super();
-        dao = new PatrolmanDAO();
+       // dao = new PatrolmanDAO();
         // TODO Auto-generated constructor stub
     }
 

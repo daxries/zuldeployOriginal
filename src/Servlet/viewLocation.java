@@ -1,23 +1,23 @@
 package Servlet;
 
-import javax.servlet.RequestDispatcher; 
+import javax.servlet.RequestDispatcher;  
 import java.io.IOException; 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+//import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-import Model.Location;
+//import Model.Location;
 import DAO.locationDAO;
 
 public class viewLocation extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private locationDAO dao;   
+    //private locationDAO dao;   
     /**
      * @see HttpServlet#HttpServlet()
      */
     public viewLocation() {
         super();
-        dao = new locationDAO();
+        //dao = new locationDAO();
         // TODO Auto-generated constructor stub
     }
 

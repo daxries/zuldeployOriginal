@@ -1,6 +1,6 @@
 package Servlet;
 
-import java.io.IOException;    
+import java.io.IOException;     
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -11,19 +11,19 @@ import DAO.ResidentDAO;
 import Model.Resident;
  
 /**
- * Servlet implementation class ViewShawlController 
+ * Servlet implementation class ViewShawlController  
  */
 /**
  * Servlet implementation class UpdateShawlController
  */
-@WebServlet("/CommUpdateResidentControlle")
-public class CommUpdateResidentController extends HttpServlet {
+@WebServlet("/ResUpdateResidentControlle")
+public class ResUpdateResidentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private ResidentDAO dao;    
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CommUpdateResidentController() {
+    public ResUpdateResidentController() {
         super();
         dao = new ResidentDAO();
         // TODO Auto-generated constructor stub
@@ -36,7 +36,7 @@ public class CommUpdateResidentController extends HttpServlet {
 		// TODO Auto-generated method stub
 		String residentId = request.getParameter("residentId");
 		request.setAttribute("resident", ResidentDAO.getResidentDetail(residentId));
-		RequestDispatcher view = request.getRequestDispatcher("comm UpdateRes.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("res UpdateRes.jsp");
 		view.forward(request, response);
 	}
 
@@ -58,10 +58,10 @@ public class CommUpdateResidentController extends HttpServlet {
 		dao.updateResident(s); 
 		
 		request.setAttribute("residents", ResidentDAO.getResidentDetails());
-		RequestDispatcher view = request.getRequestDispatcher("HOMEPAGE COM.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("HOMEPAGE RESIDENTS.jsp");
 		view.forward(request, response);
 	}
 
+	
 }
-
 

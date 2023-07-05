@@ -1,17 +1,17 @@
 package Servlet;
 
-import javax.servlet.RequestDispatcher; 
+import javax.servlet.RequestDispatcher;  
 import java.io.*;
-import java.nio.file.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.nio.file.*;
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.annotation.MultipartConfig;
+//import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.*;
 
-import Model.Report;
+//import Model.Report;
 
 import DAO.ReportDAO;
 
@@ -22,14 +22,14 @@ import DAO.ReportDAO;
 @WebServlet("/ViewReportCmm")
 public class viewReportComm extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ReportDAO dao;
+	//private ReportDAO dao;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public viewReportComm() {
         super();
-        dao = new ReportDAO();
+        //dao = new ReportDAO();
         // TODO Auto-generated constructor stub
     }
 

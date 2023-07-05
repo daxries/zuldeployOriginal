@@ -8,21 +8,21 @@ package DAO;
  * Student id:
  */
   
-import java.sql.*;       
+import java.sql.*;         
 import java.util.*;
-import java.util.Date;
+//import java.util.Date;
 
 
 import Database.ConnectionManager;
 import Model.Resident;
-import Model.*;
+//import Model.*;
 
 public class ResidentDAO {
 	private static Connection con = null;
 	private static PreparedStatement ps = null;
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
-	private static String sql;
+	//private static String sql;
 	private String residentId;
 	private String residentUsername,residentPassword,residentName,residentAddress,residentEmail;
 	private int residentPhoneNum;

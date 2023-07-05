@@ -35,7 +35,7 @@ public class CreatePatrolmanServlet extends HttpServlet {
 		
 		Patrolman s = new Patrolman();
 		//s.setPatrolmanId(request.getParameter("patrolmanId"));
-		s.setResidentId(Integer.parseInt(request.getParameter("residentId")));
+		s.setResidentId(request.getParameter("residentId"));
 		s.setPatrolmanUsername(request.getParameter("patrolmanUsername"));
 		s.setPatrolmanPassword(request.getParameter("patrolmanPassword"));
 		

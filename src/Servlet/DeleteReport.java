@@ -1,32 +1,30 @@
 package Servlet;
 
-import javax.servlet.RequestDispatcher; 
-import java.io.*;
-//import java.nio.file.*;
-//import java.text.ParseException;
-//import java.text.SimpleDateFormat;
-//import java.util.Date;
+import java.io.IOException; 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-//import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-
+import Model.Report;
 import DAO.ReportDAO;
-
 /**
- * Servlet implementation class ListShawlController
+ * Servlet implementation class DeleteReport
  */
-@WebServlet("/ListReports")
-public class ListReport extends HttpServlet {
+@WebServlet("/DeleteRepor")
+public class DeleteReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	//private ReportDAO dao;       
+	private ReportDAO dao; 
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ListReport() {
+    public DeleteReport() {
         super();
-       // dao = new ReportDAO();
+        dao = new ReportDAO();
+        
         // TODO Auto-generated constructor stub
     }
 
@@ -35,8 +33,15 @@ public class ListReport extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		String reportId = request.getParameter("reportId");
+		dao.deleteReport(reportId);
 		request.setAttribute("reports", ReportDAO.getReportDetails());
-		RequestDispatcher view = request.getRequestDispatcher("res viewReport.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("ListReportPat");
 		view.forward(request, response);
 	}
+
+
 }
+
+

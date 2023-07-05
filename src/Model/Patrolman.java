@@ -4,9 +4,10 @@ public class Patrolman {
 	
 	private int patrolnum;
 	private String patrolmanId;
-	private int residentId;
+	private String residentId;
 	private String patrolmanUsername;
 	private String patrolmanPassword;
+	private String loginUsername;
 	
 
 	public int getPatrolnum() {
@@ -21,10 +22,10 @@ public class Patrolman {
 	public void setPatrolmanId(String patrolmanId) {
 		this.patrolmanId = patrolmanId;
 	}
-	public int getResidentId() {
+	public String getResidentId() {
 		return residentId;
 	}
-	public void setResidentId(int residentId) {
+	public void setResidentId(String residentId) {
 		this.residentId = residentId;
 	}
 	public String getPatrolmanUsername() {
@@ -38,5 +39,12 @@ public class Patrolman {
 	}
 	public void setPatrolmanPassword(String patrolmanPassword) {
 		this.patrolmanPassword = patrolmanPassword;
+	}
+	
+	public String getPatrolmanLoginUsername() {
+		return loginUsername;
+	}
+	public void setPatrolmanLoginUsername(String loginUsername) {
+		this.loginUsername = loginUsername;
 	}
 }

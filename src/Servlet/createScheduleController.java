@@ -1,13 +1,13 @@
 package Servlet;
 
-import java.io.IOException; 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.IOException;  
+//import java.text.ParseException;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 import javax.servlet.RequestDispatcher;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+//import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 import Model.scheduleModel;
@@ -37,20 +37,16 @@ public class createScheduleController extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		 scheduleModel s = new scheduleModel();
-		    s.setScheduleId(request.getParameter("scheduleId"));
+		    //s.setScheduleId(request.getParameter("scheduleId"));
 		    s.setPatrolmanId(request.getParameter("patrolmanId"));
 		    s.setScheduleTime(request.getParameter("scheduleTime"));
-
-
-
 		    s.setscheduleDate(request.getParameter("scheduleDate"));
-
 		    s.setLocationId(Integer.parseInt(request.getParameter("locationId")));
 		    
 		    dao.addSchedule(s);
 		    
 		    request.setAttribute("schedules", scheduleDao.getScheduleDetails());
-		    RequestDispatcher view = request.getRequestDispatcher("comm CreateSchedule.jsp"); 
+		    RequestDispatcher view = request.getRequestDispatcher("listScheduleControllerComm"); 
 		    view.forward(request, response);
 	}
 
